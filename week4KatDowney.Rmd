@@ -1,0 +1,52 @@
+---
+title: "Week 4 Assignment - Developing Data Products"
+author: "Kat Downey"
+date: "02/08/2022"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+**Shiny Application and Reproducible Pitch**
+Katrina Downey
+02/08/2022
+
+##
+**Project Goal**
+This peer assessed assignment has two parts.
+
+First, you will create a shiny application and deply it on the Rstudio's servers.
+
+Second, you will use slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+##
+**Steps to Perform**
+1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application
+2. Deploy the application on Rstudio's shiny server
+3. Share the application link by pasting it into the provided text box
+4. Share your server.R and ui.R code on github
+
+
+##
+**How to use the application**
+Simple application where you can choose the Education rate and see the impoact on Education.
+
+The application is running here
+
+The data used, ui.R and Server.R are in the Github Rep Here
+
+##
+```{r model}
+
+plot(swiss$Fertility~swiss$Examination, xlab = 'Examination', ylab = 'Fertility')
+abline(lm(swiss$Fertility~swiss$Examination), 
+         xlab = "Education Rate",
+         ylab = "Fertility Rate",
+         col = "red", lwd =2)
+
+
+```
+
